@@ -1,0 +1,88 @@
+<div id="title">
+    <h2 mat-dialog-tiltle >
+        Modifier les données du projet
+    </h2>
+</div>
+
+<mat-dialog-content>
+    <div container-fluid style="min-height: 500px;">
+        <form #editForm="ngForm" (ngSubmit)="edit()" class="text-center" style="align-content: center;">
+            <div class="container-fluid" style="color: tomato;" [hidden]="!isOk">Tous les champs du formulaire sont requis et sont des entiers</div>
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- tache1 -->
+                    <label for="tache1">Tache 1</label>
+                    <input type="text" id="tache1" name="tache1" class="form-control" placeholder="tache1"
+                        [(ngModel)]="editData.tache1" value={{editData.tache1}}>
+                </div>
+                <div class="col">
+                    <!-- tache2 -->
+                    <label for="tache2">Tache 2</label>
+                    <input type="text" id="tache2" name="tache2" class="form-control" placeholder="tache2"
+                        [(ngModel)]="editData.tache2" value={{editData.tache2}}>
+                </div>
+            </div>
+        
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- tache3 -->
+                    <label for="tache3">Tache 3</label>
+                    <input type="text" id="tache3" name="tache3" class="form-control" placeholder="tache3"
+                        [(ngModel)]="editData.tache3" value={{editData.tache3}}>
+                </div>
+                <div class="col">
+                    <!-- tache4 -->
+                    <label for="tache4">Tache 4</label>
+                    <input type="text" id="tache4" name="tache4" class="form-control" placeholder="tache4"
+                        [(ngModel)]="editData.tache4" value={{editData.tache4}}>
+                </div>
+            </div>
+        
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- technique -->
+                    <label for="technique">Technique</label>
+                    <input type="text" id="technique" name="technique" class="form-control" placeholder="technique"
+                        [(ngModel)]="editData.technique" value={{editData.technique}}>
+                </div>
+                <div class="col">
+                    <!-- performance -->
+                    <label for="performance">Performance</label>
+                    <input type="text" id="performance" name="performance" class="form-control" placeholder="performance"
+                        [(ngModel)]="editData.performance" value={{editData.performance}}>
+                </div>
+            </div>
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- ergonomie -->
+                    <label for="ergonomie">Ergonomie</label>
+                    <input type="text" id="ergonomie" name="ergonomie" class="form-control" placeholder="ergonomie"
+                        [(ngModel)]="editData.ergonomie" value={{editData.ergonomie}}>
+                </div>
+                <div class="col">
+                    <!-- fonction metier -->
+                    <label for="fonctionMetier">Fonctions métiers</label>
+                    <input type="text" id="fonctionMetier" name="fonctionMetier" class="form-control"
+                        placeholder="fonctionMetier" [(ngModel)]="editData.fonctionMetier" value={{editData.fonctionMetier}}>
+                </div>
+            </div>
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- intuitivite -->
+                    <label for="intuitivite">intuitivite</label>
+                    <input type="text" id="intuitivite" name="intuitivite" class="form-control" placeholder="intuitivite"
+                        [(ngModel)]="editData.intuitivite" value={{editData.intuitivite}}>
+                </div>
+            </div>
+            
+            <div style="margin-left: 100px;">
+                <mat-dialog-actions>
+                    <button class="btn btn-primary" mat-dialog-close type="submit" style="margin-right: 20px;">Enregistrer</button>
+                    <button class="btn btn-danger" mat-dialog-close>Fermer</button>
+                </mat-dialog-actions>
+            </div>
+            
+        </form>
+    </div>
+</mat-dialog-content>
+

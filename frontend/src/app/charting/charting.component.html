@@ -1,0 +1,23 @@
+<div class="container-fluid card" style="margin-top: 40px; padding: 10px;">
+
+    <div class="container-fluid">
+        <select class="form-select" id="select" aria-label="Default select example" [(ngModel)]="data"
+            (change)="onChart()">
+            <option selected value="">Choisir un projet</option>
+            <option *ngFor="let item of projectList" [value]="item.id">{{item.projet}}</option>
+        </select>
+    </div>
+
+    <div class="row" >
+
+        <div class="graph">
+            <canvas id="myChart1" style="height: 150px; width: 150px;"></canvas>
+        </div>
+
+        <div class="graph">
+            <canvas id="myChart2" style="height: 150px; width: 150px;"></canvas>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="container-fluid" style="margin-top: 15px;">
+
+    <div class="container-fluid" id="form">
+        
+            <select class="form-select" id="select" aria-label="Default select example" [(ngModel)]="searchData" 
+            (change) = "onSubmit()"
+            >
+                <option selected value="">Choisir un client</option>
+                <option selected value="">Tous les projets</option>
+                <option *ngFor="let item of items" [value]="item">{{item}}</option>
+              
+            </select>
+        
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Client</th>
+                <th scope="col">Projet</th>
+                <th scope="col">Intervenant</th>
+                <th scope="col">Echeance</th>
+                <th scope="col">Charge Hj</th>
+                <th scope="col">Date démarrage</th>
+                <th scope="col">Activité</th>
+                <th scope="col">Technologies</th>
+                <th scope="col">Dernière modification</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let project of projectList">
+                <th scope="row">{{project.id}}</th>
+                <td>{{project.client}}</td>
+                <td>{{project.projet}}</td>
+                <td>{{project.intervenant}}</td>
+                <td>{{project.echeance}}</td>
+                <td>{{project.charge}}</td>
+                <td>{{project.dateDebut}}</td>
+                <td>{{project.activite}}</td>
+                <td>{{project.technologie}}</td>
+                <td>{{project.modif}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

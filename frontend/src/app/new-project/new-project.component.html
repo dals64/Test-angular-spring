@@ -1,0 +1,72 @@
+
+<div class="mt-4 col-6 offset-3">
+
+    <div class="card">
+        <!-- Default form register -->
+        <form class="text-center border border-light p-5" #registerForm="ngForm" (ngSubmit)="submit()">
+        
+            <p class="h4 mb-4">Nouveau projet</p>
+            <div class="container-fluid" style="color: tomato;" [hidden]="!isOk">Tous les champs du formulaire sont requis</div>
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- client -->
+                    <input type="text" id="client" class="form-control" name="client" placeholder="client *"
+                        [(ngModel)]="formData.client">
+                </div>
+                <div class="col">
+                    <!-- projet -->
+                    <input type="text" id="projet" name="projet" class="form-control" placeholder="Nom du projet *"
+                        [(ngModel)]="formData.projet" >
+                </div>
+            </div>
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- intervenant -->
+                    <input type="text" id="intervenant" name="intervenant" class="form-control" placeholder="intervenant *"
+                        [(ngModel)]="formData.intervenant" >
+                </div>
+                <div class="col">
+                    <!-- charge -->
+                    <input type="text" id="charge" name="charge" class="form-control" placeholder="charge *"
+                        [(ngModel)]="formData.charge" (change)="validation()" required>
+                    <div style="color: tomato;" [hidden]="!error">Ne peut contenir que des nombres entiers</div>
+                </div>
+            </div>
+            <div class="form-row mb-4">
+                <div class="col form-group">
+                    <!-- debut -->
+                    <label for="debut">Debut</label>
+                    <input type="date" id="debut" name="debut" class="form-control" placeholder="Date de debut *"
+                        [(ngModel)]="formData.dateDebut" >
+                </div>
+                <div class="col form-group">
+                    <!-- echeance -->
+                    <label for="echeance">Echeance</label>
+                    <input type="date" id="echeance" name="echeance" class="form-control" placeholder="echeance *"
+                        [(ngModel)]="formData.echeance" >
+                </div>
+            </div>
+        
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- technologie -->
+                    <input type="text" id="technologie" name="technologie" class="form-control" placeholder="technologie *"
+                        [(ngModel)]="formData.technologie" >
+                </div>
+                <div class="col">
+                    <!-- activite -->
+                    <input type="text" id="activite" name="activite" class="form-control" placeholder="activité *"
+                        [(ngModel)]="formData.activite">
+                </div>
+            </div>
+        
+        
+            <!-- submit button -->
+            <button  class="btn btn-primary" type="submit">Enregistrer</button>
+        
+        
+        </form>
+        <!-- Default form register -->
+    </div>
+    
+</div>

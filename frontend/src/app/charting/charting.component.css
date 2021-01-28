@@ -1,0 +1,11 @@
+#select {
+    min-width: 400px;
+    height: 40px;
+}
+
+.graph {
+    margin: 90px;
+    display: block;
+    height: 400px;
+    width: 400px;
+}

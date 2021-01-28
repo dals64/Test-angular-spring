@@ -1,0 +1,46 @@
+#editIcon {
+    margin-right: 30px;
+}
+
+
+#options {
+    display: none;
+    border: 1px solid;
+    width: 100%;
+    padding: 2px;
+}
+
+#container {
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.multiSelect {
+    width: 100%;
+}
+
+
+#select {
+    width: 100%;
+    height: 40px;
+}
+
+.selectBox {
+    width: 100%;
+    font-weight: bold;
+}
+
+
+#options label:hover {
+    background-color: #1e90ff;
+}
+
+#list {
+    width: 100%;
+}
+
+thead {
+    color: white;
+    background-color: rgb(61, 62, 64);
+    font-weight: 1;
+}
